@@ -1,5 +1,8 @@
+# 🔗 Linux Link Commands (`ln`) – Interview Q&A with Examples
 
-# 🔗 Linux Link Commands (ln) – Interview Q&A with Examples
+This document covers the most commonly asked **scenario-based interview questions** about Linux **hard links** and **soft (symbolic) links**, with simple answers and examples.
+
+---
 
 ## 1. What is the difference between a Hard Link and a Soft Link?
 - **Hard Link:** Points to file’s data (inode). Works even if the original file is deleted.  
@@ -15,7 +18,7 @@ Hard Link: Still works (same inode).
 Soft Link: Becomes broken (dangling).
 
 3. Can you create a hard link for a directory?
-Normally No (for safety reasons).
+Normally No (to avoid loops).
 
 Soft links can be created for directories.
 
@@ -29,7 +32,7 @@ Check inode:
 bash
 Copy code
 ls -i file1
-Find all files with same inode:
+Find all files with the same inode:
 
 bash
 Copy code
@@ -69,7 +72,3 @@ To copy the link itself:
 bash
 Copy code
 cp -a softlink newlink
-✅ These are the most asked Linux link command interview questions with examples.
-
-yaml
-Copy code
